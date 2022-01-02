@@ -1,0 +1,12 @@
+
+@media (max-width: 500px) {
+    .wishCard{
+        width:"100%" 
+    }
+  }
+
+@media (min-width: 500px) {
+    .wishCard{
+        width:"80%" 
+    }
+  }
