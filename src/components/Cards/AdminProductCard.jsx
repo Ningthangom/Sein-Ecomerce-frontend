@@ -8,7 +8,7 @@ const AdminProductCard = ({product, handleRemove, handleUpdate}) => {
 
  // destructure
  const { title, description, images, slug, measurement,price } = product;
- const {user } = useSelector((state) => ({ ...state}));
+
 
     return (
         <Card

@@ -7,16 +7,14 @@ import { Avatar, Badge } from 'antd';
 
 import { toast } from "react-toastify";
 
-import LoadingOutlined from '@ant-design/icons'
-
 const ImageUpload= ({values, setValues, setLoading}) => {
 
     const {user} = useSelector((state) => ({...state}))
-    const [imageloading, setImageloading] = useState(false)
+    
 
     const fileResizeAndUpload = (e) => {
 
-        setImageloading(true);
+       
 
         // resize images
         let files = e.target.files;// to get one file use e.target.file[0]
@@ -43,7 +41,7 @@ const ImageUpload= ({values, setValues, setLoading}) => {
                             console.log("response in posting image ", res);
                             allUploadedIimages.push(res.data)
                             setValues({...values, images: allUploadedIimages});
-                            setImageloading(false)
+                           
                             setLoading(false);
                         })
                         .catch( (err) => {
@@ -53,7 +51,7 @@ const ImageUpload= ({values, setValues, setLoading}) => {
                             }else{
                                 console.log("error posting images to backend", err)
                                 setLoading(false);
-                                setImageloading(false)
+                               
                             }
                             
                         }    

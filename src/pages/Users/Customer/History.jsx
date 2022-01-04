@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from "react";
 /* import UserNav from "../../components/nav/UserNav"; */
 import { getOrderList } from "../../../connectBackend/user";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import ShowPaymentInfo from "../../../components/Cards/ShowpaymentInfo";
-import { toast } from "react-toastify";
 import Invoice from '../../../components/order/Invoice'
 import {
-    Document,
-    Page,
-    Text,
-    View,
-    StyleSheet,
+   
     PDFDownloadLink,
-    PDFViewer,
   } from "@react-pdf/renderer";
 
 const History = () => {
@@ -29,7 +23,7 @@ const History = () => {
 
   const loadUserOrders = () =>
   getOrderList(user.token).then((res) => {
-    console.log(JSON.stringify(res.data, null, 4));
+   /*  console.log(JSON.stringify(res.data, null, 4)); */
       setOrders(res.data);
     });
 

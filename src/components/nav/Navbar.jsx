@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SearchProductMui from "../../components/Forms/SearchProductMui";
 import SearchProduct from "../../components/Forms/SearchProduct";
 import { getAuth, signOut } from "firebase/auth";
-import {link} from "react-scroll";
+
 
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";

@@ -14,7 +14,7 @@ import FormCategory from '../../components/Forms/Form'
 
 const UpdateCategory = () => {
   const [name, setName] = useState("");
-  const [loading, setLoading] = useState(false);
+
 
   const navigate = useNavigate();
 
@@ -42,19 +42,18 @@ const UpdateCategory = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
 
     // send name with token to connectBackend
     updateAcategory(slug,{name}, user.token)
       .then((res) => {
         toast.success(` "${name}" was created successfully`);
         setName("");
-        setLoading(false);
+       
         navigate('/admin/dashboard')
       })
       .catch((err) => {
         toast.error(`${err.response.data}`);
-        setLoading(false);
+       
         setName('');
       });
   };

@@ -16,14 +16,14 @@ const BestSellers = () => {
 
     useEffect(() => {
         mostSold()
-        console.log("page Num changed is called", pageNum)
+       /*  console.log("page Num changed is called", pageNum) */
     }, [pageNum])
 
     useEffect(() => {
         productCount().then((res) => 
            { 
             setTotalProductCount(res.data)
-            console.log(res.data);
+           /*  console.log(res.data); */
         }
         )
     },[])
@@ -63,16 +63,6 @@ const BestSellers = () => {
             current={pageNum}
             total={(totalProductCount / 2) * 10}
             onChange={(value) => setPageNum(value)}
-          /*  onChange={(newCurrent, newPageSize) => {
-            const pageSizeChange = pageSizeRef.current !== newPageSize;
-            if (pageSizeChange) {
-              setPageNum(1);
-            } else {
-              setPageNum(newCurrent);
-            }
-            pageSizeRef.current = newPageSize;
-          }}
-          showSizeChanger={true} */
           />
         </nav>
       </div>

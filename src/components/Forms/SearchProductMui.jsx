@@ -1,10 +1,8 @@
 import React from 'react';
-import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
+import { styled, } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
-import {useParams, useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
-import {SearchOutlined} from '@ant-design/icons';
 import { Input, Space } from 'antd';
 const { Search } = Input;
 

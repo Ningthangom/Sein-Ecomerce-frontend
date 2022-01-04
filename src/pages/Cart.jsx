@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 const Cart = () => {
   const { cart, user } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
-  console.log(cart);
+ /*  console.log(cart); */
   const navigate = useNavigate();
 
   const getTotal = () => {
@@ -76,14 +76,14 @@ const Cart = () => {
     });
     userCart(cart, user.token)
       .then((res) => {
-        console.log("CART POST RES", res);
+       /*  console.log("CART POST RES", res); */
         if (res.data.ok) navigate("/user/checkout");
       })
     .catch((err) => {
       if(err.status === '401') {
         toast.error("please logout and login again")
       }
-      console.log("cart save err", err)
+     /*  console.log("cart save err", err) */
     }
     );
   };

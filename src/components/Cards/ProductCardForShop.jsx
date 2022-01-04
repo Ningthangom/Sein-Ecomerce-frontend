@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {Card,Tooltip } from 'antd';
-import { EyeOutlined, ShoppingCartOutlined,HeartOutlined } from "@ant-design/icons";
+import { EyeOutlined, ShoppingCartOutlined} from "@ant-design/icons";
 import grocery from '../../images/general.jpg';
 
 import {useNavigate, Link} from 'react-router-dom';
@@ -8,7 +8,7 @@ import {AverageRating} from './SingleProduct/rating';
 import StarRating from 'react-star-ratings';
 import _ from "lodash";
 import { useSelector, useDispatch } from "react-redux";
-import {removeWishlist, addToWishlist, getWishlist} from '../../connectBackend/user';
+import {removeWishlist, addToWishlist} from '../../connectBackend/user';
 import {toast} from 'react-toastify'
 
 

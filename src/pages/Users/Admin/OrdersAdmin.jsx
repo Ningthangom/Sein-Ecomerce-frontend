@@ -17,7 +17,7 @@ const OrdersAdmin = () => {
     const [orders, setOrders] = useState([]);
       // socket
   const socket = useContext(SocketContext);
-  console.log("socket is on inside order", socket)
+  /* console.log("socket is on inside order", socket) */
   const [socketObject, setSocketObject] = useState([]);
    
     const {user} = useSelector((state) => ({...state}))

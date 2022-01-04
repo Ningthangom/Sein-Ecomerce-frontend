@@ -38,7 +38,7 @@ const Checkout = () => {
     // socket io 
     const socket = useContext(SocketContext);
     const activateSocket =  (neworder) => {
-      console.log("this is new order to send to socket as payload",neworder )
+     /*  console.log("this is new order to send to socket as payload",neworder ) */
       socket.emit("newOrderAlert",neworder)
     }
 
@@ -177,7 +177,7 @@ const Checkout = () => {
 
   const createCashOrder = () => {
     createCashOrderForUser(user.token, COD, couponRedux).then((res) => {
-      console.log("USER CASH ORDER CREATED RES ", res);
+     /*  console.log("USER CASH ORDER CREATED RES ", res); */
       // empty cart form redux, local Storage, reset coupon, reset COD, redirect
       if (res.data.ok) {
         // empty local storage
@@ -208,12 +208,17 @@ const Checkout = () => {
         /* setSocketOrder(order.data.justCreatedOrder); */
         activateSocket(res.data.newOrder);
       }
+    }).catch((error) => {
+      if(error.status === '401') {
+        toast.error("please logout and login again")
+      }
+      toast.error("error in placing order !! please contact the store")
     });
   };
 
   const createPickupOrderInCheckout = () => {
     createPickupOrder(user.token, PNP, couponRedux).then((res) => {
-      console.log("USER CASH ORDER CREATED RES ", res);
+     /*  console.log("USER CASH ORDER CREATED RES ", res); */
       // empty cart form redux, local Storage, reset coupon, reset COD, redirect
       if (res.data.ok) {
         // empty local storage
@@ -244,8 +249,11 @@ const Checkout = () => {
         /* setSocketOrder(order.data.justCreatedOrder); */
         activateSocket(res.data.newOrder);
       }
-    }).catch(err => {
-      toast.error("error in placing order")
+    }).catch((error) => {
+      if(error.status === '401') {
+        toast.error("please logout and login again")
+      }
+      toast.error("error in placing order !! please contact the store")
     });
   };
 
@@ -326,20 +334,6 @@ const Checkout = () => {
 
         <div className="row">
           <div className="col-md-6">
-            {/*  {COD ? ( <button
-                className="btn btn-primary"
-                disabled={!addressValues || !products.length}
-                onClick={createCashOrder}
-              >
-                Place Cash Order
-              </button>) : (
-               <button
-              className="btn btn-primary"
-              disabled={!shippingInfo || !products.length}
-              onClick={handlePlaceOrder}
-            >
-              Place Order
-            </button>) } */}
             {checkoutbutton}
           </div>
 

@@ -112,7 +112,7 @@ const Orders = ({ orders, handleStatusChange }) => {
               </div>
             </div>
             {showOrderInTable(order)}
-            { order && order.orderType === "pay and deliver" || order.orderType === "Cash On Delivery" ?
+            { order.orderType === "pay and deliver" || order.orderType === "Cash On Delivery" ?
             <ul style={{ marginTop: 10, marginBottom: 0}}>
               <li>Delivery address: {order.orderdBy.shippingInfo.address},
                  {order.orderdBy.shippingInfo.city},

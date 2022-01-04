@@ -2,7 +2,7 @@ import axios from "axios"
 /* import { auth } from "../../../backend/firebase"; */
 
 export const getOrders = async (authtoken) => {
-  console.log("getorder in connectbackend is called")
+ /*  console.log("getorder in connectbackend is called") */
    return  await axios.get(`${process.env.REACT_APP_API}/admin/orders`,{
         headers: { 
             authtoken,

@@ -91,7 +91,7 @@ export const userCart = async (cart, authtoken) =>
 
 
   export const getOrderList = async (authtoken) =>{
-    console.log(`getOrderList is called inside user connectbackend`)
+   /*  console.log(`getOrderList is called inside user connectbackend`) */
  return await axios.get(
     `${process.env.REACT_APP_API}/user/orders`,
     {
