@@ -91,7 +91,7 @@ const Shop = () => {
       /*   setProducts(p.data); */
 
         setLoading(false);
-        console.log("this is products in shop", p.data);
+        /* console.log("this is products in shop", p.data); */
       })
       .catch((err) => {
         console.log(err);

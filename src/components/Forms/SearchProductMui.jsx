@@ -8,21 +8,7 @@ const { Search } = Input;
 
 
 
-/* const Search = styled('form')(({ theme }) => ({
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginRight: 0,
-    marginLeft: 0,
-    width: 160,
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(1),
-      width: 'auto',
-    },
-  })); */
+
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
@@ -48,7 +34,7 @@ const SearchProductMui = () => {
 
     const handleChange = e => {
         //will get the inputtext and push it to redux reducer
-        console.log(e.target.value);
+       /*  console.log(e.target.value); */
         dispatch({
             type: "SEARCH_QUERY",
             // make sure to put it in text object

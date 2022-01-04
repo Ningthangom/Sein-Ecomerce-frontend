@@ -21,14 +21,14 @@ import { toast } from "react-toastify";
 import {createOrUpdateUser} from '../../connectBackend/auth';
 
 const TestLogin = () => {
-    const [email, setEmail] = useState("ningthangom@gmail.com");
-    const [password, setPassword] = useState("987654321");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const [checkbox, setCheckbox] = useState(false);
   
     const { user } = useSelector((state) => ({ ...state }));
     const {state} = useLocation();
-    console.log("that from uselocation: ", state)
+   /*  console.log("that from uselocation: ", state) */
   
   
     const provider = new GoogleAuthProvider();
@@ -70,7 +70,7 @@ const TestLogin = () => {
   
     const handleSubmit = async (e) => {
       //
-      console.log("handleSubmit is called")
+     /*  console.log("handleSubmit is called") */
       e.preventDefault();
       setLoading(true);
   
@@ -102,7 +102,7 @@ const TestLogin = () => {
         createOrUpdateUser(idTokenResult.token)
           .then((res) => {
             // this res is coming back from the backend
-            console.log("res coming back from the backend after login", res.data);
+           /*  console.log("res coming back from the backend after login", res.data); */
             // send the data to redux state
             dispatch({
               type: "LOGGED_IN_USER",
@@ -119,7 +119,7 @@ const TestLogin = () => {
             roleBaseRedirect(res, navigate);
           })
           .catch((err) => {
-            console.log("sending token to backend did not work", err);
+           /*  console.log("sending token to backend did not work", err); */
             setLoading(false);
           });
   
@@ -127,7 +127,7 @@ const TestLogin = () => {
         /*  setEmail('');
           setPassword(''); */
       } catch (err) {
-        console.log(err);
+       /*  console.log(err); */
         toast.error("something went wrong. Please try again");
         setLoading(false);
       }
@@ -137,7 +137,7 @@ const TestLogin = () => {
 
 
     const googleLogin = async () => {
-      console.log("google login");
+      /* console.log("google login"); */
       await signInWithPopup(auth, provider)
         .then((result) => {
           // This gives you a Google Access Token. You can use it to access the Google API.
@@ -145,7 +145,7 @@ const TestLogin = () => {
           /*  const idTokenResult = credential.accessToken; */
           // The signed-in user info.
           let userDetail = result.user;
-          console.log("this is user detail: ", userDetail);
+         /*  console.log("this is user detail: ", userDetail); */
           const idTokenResult = userDetail.accessToken;
           /* console.log(idTokenResult); */
   
@@ -153,7 +153,7 @@ const TestLogin = () => {
           createOrUpdateUser(idTokenResult)
           .then((res) => {
             // this res is coming back from the backend
-            console.log("res coming back from the backend", res);
+           /*  console.log("res coming back from the backend", res); */
             // send the data to redux state
             dispatch({
               type: "LOGGED_IN_USER",
@@ -168,14 +168,14 @@ const TestLogin = () => {
             roleBaseRedirect(res, navigate);
           })
           .catch((err) => {
-            console.log("sending token to backend did not work", err);
+           /*  console.log("sending token to backend did not work", err); */
           });
         })
         .catch((error) => {
           // Handle Errors here.
           // The email of the user's account used.
           // The AuthCredential type that was used.
-        console.log(error);
+    /*     console.log(error); */
           // ...
         });
     };
