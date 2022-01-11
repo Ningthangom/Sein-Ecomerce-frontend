@@ -93,6 +93,7 @@ const CreateCouponPage = () => {
                 className="form-control"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
+                placeholder="character be greater 6"
                 autoFocus
                 required
               />

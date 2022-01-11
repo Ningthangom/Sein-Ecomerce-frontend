@@ -72,7 +72,10 @@ const TestLogin = () => {
       //
      /*  console.log("handleSubmit is called") */
       e.preventDefault();
+      
       setLoading(true);
+      
+     
   
       if (!email || !password) {
         toast.error("Email and password is required");

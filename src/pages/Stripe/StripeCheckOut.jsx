@@ -175,11 +175,11 @@ const StripeCheckout = () => {
           cover={
             <img
               src={generalImage}
-              style={{
+             /*  style={{
                 height: "200px",
                 objectFit: "cover",
                 marginBottom: "-50px",
-              }}
+              }} */
             />
           }
           actions={[

@@ -5,7 +5,7 @@ import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import ProductCardInCheckout from "../components/Cards/ProductCardInCheckout";
 import CartTableBody from '../components/Cards/CartTableBody'
-import CartTable from "../components/Cards/CartTable";
+/* import CartTable from "../components/Cards/CartTable"; */
 import {userCart} from '../connectBackend/user'
 import { toast } from "react-toastify";
 
@@ -172,6 +172,7 @@ const Cart = () => {
                 }} */
                 to={"/login"}
                 state={"cart"}
+                style={{color: "white"}}
               >
                 Login to Checkout
               </Link>

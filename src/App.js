@@ -39,6 +39,8 @@ const AppWrapper = () => {
 
   useEffect(() => {
     /*  console.log("useEffect is run") */
+    console.log("env: ",process.env.REACT_APP_FIREBASEAPIKEY)
+    console.log("env api: ", process.env.REACT_APP_API)
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         /*  console.log("user in App: ", user) */

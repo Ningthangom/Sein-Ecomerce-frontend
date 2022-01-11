@@ -12,11 +12,11 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import rootReducer from './reducers/index'
 
 import "antd/dist/antd.css";
-/* 
+
 // development
-const store = createStore(rootReducer, composeWithDevTools()); */
+ const store = createStore(rootReducer, composeWithDevTools()); 
 // production
-const store = createStore(rootReducer,); 
+/* const store = createStore(rootReducer,);  */
 
 
 ReactDOM.render(

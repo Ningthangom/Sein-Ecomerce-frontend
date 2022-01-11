@@ -7,6 +7,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
+ 
   apiKey: "AIzaSyANVAVzL0ER64BX05s30Q7vuTRBSwMddx4",
   authDomain: "mimi-ecomerce.firebaseapp.com",
   projectId: "mimi-ecomerce",

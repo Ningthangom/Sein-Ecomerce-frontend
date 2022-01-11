@@ -3,8 +3,9 @@ import axios from "axios";
 
 // send token to the back end
  export const createOrUpdateUser = async (authToken) => {
-    /*  console.log("createOrUpdateUser is called")
-      console.log("this is process env", process.env.REACT_APP_API) */
+     console.log("createOrUpdateUser is called")
+      console.log("this is process env", process.env.REACT_APP_API)
+      console.log("this is process env api: ", process.env.REACT_APP_AUTHADMIN)
     return await axios.post(
       `${process.env.REACT_APP_API}/create-or-update-user`,
       {},
