@@ -8,6 +8,7 @@ import "./stripe.css";
 const promise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const Payment = () => {
+  console.log("stripe key is: ", process.env.REACT_APP_STRIPE_KEY);
   return (
     <div className="container text-center" >
       <h4>Complete your purchase</h4>
