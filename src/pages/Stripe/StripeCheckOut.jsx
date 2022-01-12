@@ -22,6 +22,7 @@ const StripeCheckout = () => {
   const [processing, setProcessing] = useState("");
   const [disabled, setDisabled] = useState(true);
   const [clientSecret, setClientSecret] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // total payables 
   const [cartTotal, setCartTotal] = useState(0);
@@ -39,13 +40,18 @@ const StripeCheckout = () => {
   const elements = useElements();
 
   useEffect(() => {
+    setLoading(true);
     createPaymentIntent(user.token, couponRedux).then((res) => {
-      /* console.log("create payment intent", res.data); */
+      console.log("create payment intent", res.data);
       setClientSecret(res.data.clientSecret);
       setPayable(res.data.payable);
       setCartTotal(res.data.cartTotal);
       setShowTotalAfterDiscount(res.data.cartTotal - res.data.totalAfterDiscount)
-    });
+      setLoading(false);
+    }).catch((error) => {
+      toast.error('error in getting amounts: ', error)
+    setLoading(false);
+  });
     
   }, []);
 
@@ -161,6 +167,8 @@ const StripeCheckout = () => {
 
   return (
     <>
+    {loading ? <div>Loading....</div>: ( 
+      <>
       {!succeeded && (
         <div>
           {couponRedux && showTotalAfterDiscount !== undefined ? (
@@ -223,6 +231,66 @@ const StripeCheckout = () => {
           <Link to="/user/history">See it in your purchase history.</Link>
         </p>
       </form>
+      </>)}
+     {/*  {!succeeded && (
+        <div>
+          {couponRedux && showTotalAfterDiscount !== undefined ? (
+            <p className="alert alert-success">{`Total discount: $${showTotalAfterDiscount.toFixed(2)}`}</p>
+          ) : (
+            <p className="alert alert-danger">No coupon applied</p>
+          )}
+        </div>
+      )}
+      <div className="text-center pb-5">
+        <Card
+          cover={
+            <img
+              src={generalImage}
+          
+            />
+          }
+          actions={[
+            <>
+              <DollarOutlined className="text-info" /> <br /> Total: $
+              {cartTotal}
+            </>,
+            <>
+              <CheckOutlined className="text-info" /> <br /> Total payable : $
+              {(payable / 100).toFixed(2)}
+            </>,
+          ]}
+        />
+      </div>
+
+      <form id="payment-form" className="stripe-form" onSubmit={handleSubmit}>
+        <CardElement
+          id="card-element"
+          className="stripe-input"
+          options={cartStyle}
+          onChange={handleChange}
+        />
+        <br/>
+        <button
+          className="stripe-button"
+          disabled={processing || disabled || succeeded}
+        >
+          <span id="button-text">
+            {processing ? <div className="spinner" id="spinner"></div> : "Pay"}
+          </span>
+        </button>
+        <br />
+        {error && (
+          <div className="card-error" role="alert">
+            {error}
+          </div>
+        )}
+        <br />
+        <p className={succeeded ? "result-message" : "result-message hidden"}>
+          Payment Successful.{" "}
+          <Link to="/user/history">See it in your purchase history.</Link>
+        </p>
+      </form> */}
+      
     </>
   );
 };
