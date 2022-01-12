@@ -78,8 +78,9 @@ const Navbar = () => {
     <nav
       className="navbar navbar-expand-lg navbar-light bg-primary"
       style={{
-        /*   position:"sticky", */
+          position:"sticky",
         top: "0",
+        zIndex: 2
       }}
     >
       <div className="container-fluid">
