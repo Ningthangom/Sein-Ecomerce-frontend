@@ -1,35 +1,13 @@
 import React from 'react';
-import { styled, } from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
 import { useNavigate} from 'react-router-dom';
-import {useSelector, useDispatch} from 'react-redux';
-import { Input, Space } from 'antd';
+import { useDispatch} from 'react-redux';
+import { Input, } from 'antd';
 const { Search } = Input;
 
-
-
-
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
-      padding: theme.spacing(1, 0, 1, 1),
-      // vertical padding + font size from searchIcon
-      paddingRight: `calc(1em + ${theme.spacing(1)})`,
-      transition: theme.transitions.create('width'),
-      width: '100%',
-      [theme.breakpoints.up('md')]: {
-        width: '20ch',
-      },
-    },
-  }));
 
 const SearchProductMui = () => {
 
     let dispatch = useDispatch();
-    const {search} = useSelector((state) => ({...state}))
-    // as the search state in reducer has text property that can be destructured  
-    const {text} = search;
     const nav = useNavigate();
 
     const handleChange = e => {

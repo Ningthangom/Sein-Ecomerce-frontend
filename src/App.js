@@ -12,6 +12,7 @@ import { LoadingOutlined } from "@ant-design/icons";
 
 /* import Navbar from "./components/nav/menu/ManinNav"; */
 import Navbar from "./components/nav/Navbar";
+import Footnote from "./components/footnote/Footnote"
 
 // firebase
 import { auth } from "./firebase";
@@ -84,7 +85,8 @@ const AppWrapper = () => {
           <Navbar />
           <SideDrawer />
           <ToastContainer />
-          <App isProtected={user} />
+          <App isProtected={user} style={{ backgroundColor: 'grey', maxWidth:'100vh', overflowX:'hidden'}} />
+          <Footnote/>
         </SocketContext.Provider>
       </Router>
     </Suspense>

@@ -39,12 +39,6 @@ const Home = () => {
     ]
     return (
       <>
-       <div
-          className="text-green h6  text-center m-4 "
-          
-        >
-        Ph:087525412 A  ddress: 123 admin road, city, sa, postcode
-        </div>
         <div className="jumbotron text-danger h1 font-weight-bold text-center">
           <Jumbotron text={jumbotron} />
         </div>
