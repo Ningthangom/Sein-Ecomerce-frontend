@@ -86,7 +86,7 @@ const AppWrapper = () => {
           <SideDrawer />
           <ToastContainer />
           <App isProtected={user} style={{ backgroundColor: 'grey', maxWidth:'100vh', overflowX:'hidden'}} />
-          <Footnote/>
+      {/*     <Footnote/> */}
         </SocketContext.Provider>
       </Router>
     </Suspense>

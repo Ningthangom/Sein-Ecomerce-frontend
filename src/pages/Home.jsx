@@ -11,6 +11,7 @@ import BestSellers from '../components/home/BestSellers'
 import CategoryList from '../components/Category/CategoryList'
 import SubCategoryHome from '../components/Subcategories/SubCategoryHome';
 import {useSelector} from 'react-redux'
+import Footnote from '../components/footnote/Footnote'
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -58,7 +59,7 @@ const Home = () => {
           Subcategories
         </h4>
         <SubCategoryHome />
-       
+       <Footnote/>
       </>
     );
 }
