@@ -157,7 +157,7 @@ const Cart = () => {
               <br />
               <button
                 onClick={savePickupOrderToDb}
-                className="btn btn-sm btn-secondary mt-2"
+                className="btn btn-sm btn-secondary mt-2 mb-7"
                 disabled={!cart.length}
               >
                 Pickup and pay

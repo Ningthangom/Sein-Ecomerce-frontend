@@ -115,7 +115,7 @@ const ProductCard = ({product}) => {
 
       <>
       <Card
-       
+       style={{ marginBottom: '2rem'}}
        cover={
          <img
            src={images && images.length ? images[0].url: grocery}

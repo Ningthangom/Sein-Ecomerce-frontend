@@ -77,7 +77,7 @@ const ProductDetailCard = ({ product, onStarClick, star }) => {
         {images && images.length ? (
           <Carousel showArrows={true} autoPlay infiniteLoop>
             {images &&
-              images.map((i) => <img src={i.url} key={i.public_id} alt="" />)}
+              images.map((i) => <img src={i.url} key={i.public_id} alt="" style={{width:'20rem'}} />)}
           </Carousel>
         ) : (
           <Card
