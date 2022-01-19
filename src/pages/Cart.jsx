@@ -61,7 +61,7 @@ const Cart = () => {
         if (res.data.ok) navigate("/user/checkout");
       })
     .catch((err) => {
-      if(err.status === '401') {
+      if(err.status === 401) {
         toast.error("please logout and login again")
       }
       console.log("cart save err", err)
