@@ -67,7 +67,7 @@ export const userCart = async (cart, authtoken) =>
   )};
 
   export const createCashOrderForUser = async (authtoken, COD, couponTrueOrFalse) =>{
-   /*  console.log("create cash order is called: ", authtoken) */
+    console.log("create cash order is called: ", authtoken)
     return(
       await axios.post(
         `${process.env.REACT_APP_API}/user/cash-order`,
