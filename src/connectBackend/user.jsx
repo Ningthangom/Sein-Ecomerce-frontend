@@ -67,7 +67,7 @@ export const userCart = async (cart, authtoken) =>
   )};
 
   export const createCashOrderForUser = async (authtoken, COD, couponTrueOrFalse) =>{
-   /*  console.log("create cash order is called: ", authtoken) */
+    console.log("create cash order is called: ", authtoken)
     return(
       await axios.post(
         `${process.env.REACT_APP_API}/user/cash-order`,
@@ -81,16 +81,21 @@ export const userCart = async (cart, authtoken) =>
     )
  }
 
-  export const createPickupOrder = async (authtoken, PNP, couponTrueOrFalse) =>
-  await axios.post(
-    `${process.env.REACT_APP_API}/user/pickup-order`,
-    {couponApplied: couponTrueOrFalse, PNP },
-    {
-      headers: {
-        authtoken,
-      },
-    }
-  );
+  export const createPickupOrder = async (authtoken, PNP, couponTrueOrFalse) =>{
+    console.log("create cash order is called: ", authtoken)
+    return (
+      await axios.post(
+        `${process.env.REACT_APP_API}/user/pickup-order`,
+        {couponApplied: couponTrueOrFalse, PNP },
+        {
+          headers: {
+            authtoken,
+          },
+        }
+      )
+    )
+  }
+;
 
 
 

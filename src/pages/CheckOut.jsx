@@ -295,7 +295,7 @@ const Checkout = () => {
       <div className="col-md-6">
         {PNP === true ? null : (
           <h4 className="ml-4">Delivery Address</h4>
-        )}
+        )}   
        <Address
             handleSubmit={handleAddressSubmit}
             handleChange={handleChange}
