@@ -51,15 +51,18 @@ const OrdersAdmin = () => {
     return (
         <div className="container-fluid">
       <div className="row">
-        <div className="col-md-2">       
+        <div className="col-md-12"> 
+        <Orders orders={orders} handleStatusChange={handleStatusChange} />      
         </div>
 
-        <div className="col-md-6">
+       {/*  <div className="col-md-6">
           <h4>Admin Dashboard</h4>
           <p>If you get notification and do not have new order or "not processed" order, please refresh the page </p>
    
-          <Orders orders={orders} handleStatusChange={handleStatusChange} />
-        </div>
+          
+        </div> */}
+
+       
       </div>
     </div>
     )
