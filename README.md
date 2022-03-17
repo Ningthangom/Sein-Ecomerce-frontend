@@ -33,7 +33,7 @@
 
 ## Live page:
 
-check out the app here :[seinshopping](https://seinshopping.herokuapp.com/) 
+check out the app here : [Sein Ecommerce Web App](https://seinshopping.herokuapp.com/) 
 
 ## demo:
 
