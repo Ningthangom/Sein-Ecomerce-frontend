@@ -37,11 +37,7 @@
 
 ## demo:
 
-    ![Alt image](/pictures_of_the_app/1.png "Title")
-    ![Alt image](/pictures_of_the_app/2.png "Title")
-    ![Alt image](/pictures_of_the_app/3.png "Title")
-    ![Alt image](/pictures_of_the_app/4.png "Title")
-    ![Alt image](/pictures_of_the_app/5.png "Title")
+   ![alt text](/pictures_of_the_app/1.png)
 
 ## Technologies
 
