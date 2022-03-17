@@ -54,4 +54,5 @@ check out the app here : [Sein Ecommerce Web App](https://seinshopping.herokuapp
 - react-date-picker
 - socketio
 - bootstrap
+- stripe payment
 - and many more...................
