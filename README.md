@@ -33,7 +33,7 @@
 
 ## Live page:
 
-check out the app here :[a link](https://seinshopping.herokuapp.com/) 
+check out the app here :[seinshopping](https://seinshopping.herokuapp.com/) 
 
 ## demo:
 
