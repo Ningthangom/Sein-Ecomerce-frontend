@@ -38,6 +38,10 @@
 ## demo:
 
    ![alt text](/pictures_of_the_app/1.png)
+   ![alt text](/pictures_of_the_app/2.png)
+   ![alt text](/pictures_of_the_app/3.png)
+   ![alt text](/pictures_of_the_app/4.png)
+   ![alt text](/pictures_of_the_app/5.png)
 
 ## Technologies
 
