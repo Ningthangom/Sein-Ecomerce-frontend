@@ -1,50 +1,51 @@
- ## MERN STACK ecommerce web app
+## MERN STACK ecommerce web app
 
-    this app is a fully featured MERN STACK ecommerce web app 
-    with responsive design and gmail authentication. 
+    this app is a fully featured MERN STACK ecommerce web app
+    with responsive design and gmail authentication.
 
-    The customers will be able to : 
-     - view items categorically and individually 
+    The customers will be able to :
+     - view items categorically and individually
      - rate items
-     - add, edit and remove items to cart 
+     - add, edit and remove items to cart
      - check out in three different methods: pay now and delivery, pay cash on delivery, and pick up and pay
-     - apply coupon 
-     - check out using stripe 
-     - add items to a wishlist 
+     - apply coupon
+     - check out using stripe
+     - add items to a wishlist
      - search products by category, subcategory, colors, shipping and price
 
-    The admin will be able to: 
+    The admin will be able to:
     - add, edit, remove items
     - add, edit, remove category
     - add, edit, remove subcategory
     - add, edit, remove coupon
-    - see color coded orders based on order status: 
-        - not processed 
+    - see color coded orders based on order status:
+        - not processed
         - processing
         - dispatched
         - Cancelled
         - completed
-    - filter sales by date 
+    - filter sales by date
         - total sales,
         - pickup order,
         - paid online and delivered;
         - cash on delivery
         - responsive list of sales
 
-## Live page: 
+## Live page:
+
     check out the app here : https://seinshopping.herokuapp.com/
 
-## demo: 
-    ![Alt text]('/pictures_of_the_app/1.png' "Title")
-    ![Alt text]('/pictures_of_the_app/2.png' "Title")
-    ![Alt text]('/pictures_of_the_app/3.png' "Title")
-    ![Alt text]('/pictures_of_the_app/4.png' "Title")
-    ![Alt text]('/pictures_of_the_app/5.png' "Title")
+## demo:
 
+    ![Alt image](/pictures_of_the_app/1.png "Title")
+    ![Alt image](/pictures_of_the_app/2.png "Title")
+    ![Alt image](/pictures_of_the_app/3.png "Title")
+    ![Alt image](/pictures_of_the_app/4.png "Title")
+    ![Alt image](/pictures_of_the_app/5.png "Title")
 
+## Technologies
 
-## Technologies 
-    ``` 
+    ```
      "@ant-design/icons": "^4.7.0",
     "@david.kucsai/react-pdf-table": "^0.3.0",
     "@emotion/react": "^11.5.0",
